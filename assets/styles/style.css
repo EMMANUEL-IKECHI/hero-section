@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'FONTSPRING DEMO - Articulat CF Light';
+}
+
+:root {
+    --clr-orange: #f33525;
+    --clr-blue: #191e62;
+    --btn-padding: .6em 2em;
+}
+
+body {
+    background: url(/assets/images/bg.png);
+    background-size: 90%;
+    background-position:top right;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-blue);
+}
+
+header img {
+    width: 2.5em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 12% 1em 4em;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header nav {
+    font-size: .8em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.active {
+    color: var(--clr-orange);
+}
+
+header nav li:last-child {
+    padding: var(--btn-padding);
+    border: thin solid var(--clr-orange);
+    border-radius: 50px;
+}
+
+header nav li:last-child a {
+    color: var(--clr-orange);
+}
+
+main {
+    display: grid;
+    grid-template-columns:  repeat(2, auto);
+    align-items: center;
+}
+
+.hero-text {
+    padding-left: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    max-width: 75%;
+}
+
+.hero-text span {
+    color: var(--clr-orange);
+}
+
+main img {
+    width: 90%;
+}
+
+.hero-image img {
+    align-self: start;
+}
+
+
+.hero-text p {
+    font-family: 'FONTSPRING DEMO - Articulat CF Light';
+    font-weight: 400;
+    font-style: normal;
+    max-width: 70%;
+    padding-bottom: 1em;
+}
+
+.cta-container {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cta-container a {
+    font-size: .8em;
+}
+
+.cta-container img {
+    width: 1em;
+}
+.cta-container a:first-child{
+    background-color: var(--clr-orange);
+    padding: var(--btn-padding);
+    color: #fff;
+    border-radius: 50px;
+}
+
+.cta-container a:last-child {
+    display: flex;
+    gap: .5em;
+}
+
+.hamburger {
+    display: none;
+    gap: 5px;
+    position: fixed;
+    right: 2.5em;
+    
+}
+
+@media screen and (max-width: 600px)  {
+    header nav {
+        display: none;
+    }
+
+    header {
+        padding-inline: 2.5em;
+    }
+
+    .hamburger {
+        display: grid;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img{
+        position: fixed;
+        bottom: 2em;
+        right: -1.5em;
+        z-index: 1;
+        opacity: 50%;
+    }
+
+    .hero-text {
+        padding-left: 2.5em;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+        margin-top: .5em;
+        max-width: 100%;
+    }
+
+    .cta-container a:last-child {
+        flex-shrink: 0;
+    }
+
+    
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: var(--clr-orange);
+}
