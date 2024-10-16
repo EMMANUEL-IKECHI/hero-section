@@ -73,6 +73,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: .5em;
+    color: var(--clr-blue);
 }
 
 .hero-text h1 {
